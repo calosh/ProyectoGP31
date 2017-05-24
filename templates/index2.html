@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="container">
+    
+<h1>Opener</h1>
+    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div class="form-group">
+            <label for="csv_file">Agregar csv</label>
+            <input type="file" name="csv_file" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Subir" class="btn btn-success"/>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <p>Se necesita ejecutar los siguientes sercios de opener:</p>
+    <ul>
+        <li>tokenizer-server -p 9293</li>
+        <li>pos-tagger-server -p 9294</li>
+        <li>polarity-tagger-server -p 9295</li>
+        <li>opinion-detector-basic-server -p 9296</li>
+        <li>kaf2json-server -p 9297</li>
+    </ul>
+    <a href="{% url 'url_lista' %}" class="btn btn-default">Regresar</a>
+</div>
+
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+</body>
+</html>
