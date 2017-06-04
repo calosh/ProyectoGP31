@@ -5,7 +5,7 @@ from django.db import models
 
 class Tweet(models.Model):
     created_at = models.DateTimeField()
-    tweet_id = models.IntegerField() # id
+    tweet_id = models.IntegerField(unique=True) # id
     username = models.CharField(max_length=50) # user.screen_name
     fullname = models.CharField(max_length=50) # user.name
     followers = models.IntegerField(blank=True, null=True) #'user.followers_count',
@@ -19,3 +19,6 @@ class Tweet(models.Model):
     #retweeted = models.IntegerField()
     #favorited = models.IntegerField()
 
+
+
+# https://www.imaginanet.com/blog/primeros-pasos-con-sqlite3-comandos-basicos.html

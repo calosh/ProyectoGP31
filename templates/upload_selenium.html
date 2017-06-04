@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Normalizar</h1>
+    <form action="" method="post">{% csrf_token %}
+        <div class="form-group">
+            <label for="fechai">Fecha Inicio</label>
+            <input type="date" name="fechai" data-date="" data-date-format="DD MMMM YYYY"  value="2016-01-01" required>
+
+            <label for="fechaf">Fecha Final</label>
+            <input type="date" name="fechaf" data-date="" data-date-format="DD MMMM YYYY"  value="2016-01-01" required>
+
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Subir" class="btn btn-success"/>
+        </div>
+    </form>
+</div>
+
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+
+</body>
+</html>

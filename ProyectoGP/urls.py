@@ -20,6 +20,9 @@ from mi_csv import views
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name="index"),
+    url(r'^$', views.calendario, name="calendario"),
+    url(r'^estadisticas$', views.estadisticas, name="estadisticas$"),
     url(r'^normalizar.csv$', views.index_normalizacion, name="index_normalizacion"),
+    url(r'^location$', views.get_location, name="get_location"),
+    url(r'^extraccion$', views.extraccion_selenium, name="extraccion_selenium"),
 ]
