@@ -25,4 +25,7 @@ urlpatterns = [
     url(r'^normalizar.csv$', views.index_normalizacion, name="index_normalizacion"),
     url(r'^location$', views.get_location, name="get_location"),
     url(r'^extraccion$', views.extraccion_selenium, name="extraccion_selenium"),
+    url(r'^extraccionia$', views.extraccion_selenium2, name="extraccion_selenium2"),
+
+    url(r'^mapa', views.mapa, name="mapa"),
 ]

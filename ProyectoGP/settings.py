@@ -80,7 +80,9 @@ WSGI_APPLICATION = 'ProyectoGP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'tweets.sqlite3'),
+        #'NAME': os.path.join(BASE_DIR, 'tweets.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'tweetsIA.sqlite3'),
+        #'NAME': os.path.join(BASE_DIR, 'tweetsGP.sqlite3'),
     }
 }
 

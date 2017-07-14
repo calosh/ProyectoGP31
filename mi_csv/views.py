@@ -1,18 +1,33 @@
 # -*- coding: utf-8 -*-
+import csv
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
-
-from django.shortcuts import render
-# Create your views here.
-
-from django.http import HttpResponse
-from .models import Tweet
-from metodos.normalizar import eliminar_urls
 import datetime
 from bs4 import BeautifulSoup
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from metodos.normalizar import eliminar_urls
 from django.db.models import Count
 from django.db import IntegrityError
+
+from .models import Tweet
+
+from metodos.graficos import mapa1
+
+# Tweepy
+import tweepy
+import time
+
+ckey = "wkRHi7BxWy8OzMNd1vuu9yzUU"
+csecret = 'Qt8xwKMTY0VswKg5KRJAvpQxH2Oz2mutmh0FiDSnY40wQjLCHY'
+atoken = '1048734440-jJr8ZW7JJycCTMtDl90oRLaQO1uX9hHV6d3eGkJ'
+asecret = '5aUjQv5tgwjSkvesoeOeRgiAEUBubLct6MqIZjOrFmnYA'
+OAUTH_KEYS = {'consumer_key': ckey, 'consumer_secret': csecret, 'access_token_key': atoken,
+              'access_token_secret': asecret}
+auth = tweepy.OAuthHandler(OAUTH_KEYS['consumer_key'], OAUTH_KEYS['consumer_secret'])
+api = tweepy.API(auth)
 
 
 def estadisticas(request):
@@ -50,7 +65,17 @@ def estadisticas(request):
         i['color'] = colores[cont]
         cont = cont + 1
 
-    return render(request, 'estadisticas.html', {'lista': lista, 'listaMesesC':listaMesesC,'tweets_location':tweets_location})
+    listaMesesC20167 = listaMesesC
+    listaInv = [6056, 4056, 7034]
+    cont = 0
+    for i in listaMesesC20167:
+        if cont>=3:
+            i.append(0)
+        else:
+            i.append(listaInv[cont])
+        cont = cont +1
+    #print listaMesesC20167
+    return render(request, 'estadisticas.html', {'listaMesesC':listaMesesC,'tweets_location':tweets_location, 'listaMesesC20167':listaMesesC20167})
 
 def calendario(request):
     # Tweets agrupados y contados por fecha
@@ -90,6 +115,12 @@ def calendario(request):
     return render(request, 'calendario.html', {'lista': lista, 'listaMesesC':listaMesesC,'tweets_location':tweets_location})
 
 
+def mapa(request):
+    r = mapa1()
+    print r
+
+
+    return render(request, 'mapa.html', {'paises': r})
 
 def index_normalizacion(request):
     res = HttpResponse(content_type='text/csv')
@@ -170,10 +201,10 @@ def index_normalizacion(request):
             # valoraciones = i.find_all('span', class_="ProfileTweet-actionCountForPresentation")
             #           <span class="ProfileTweet-actionCount" data-tweet-stat-count="1187">
             valoraciones = i.find_all('span', class_="ProfileTweet-actionCount")[0:3]
-            print len(valoraciones)
+            #print len(valoraciones)
 
             lista = []
-            print valoraciones
+            #print valoraciones
 
             for valoracion in valoraciones:
                 # print valoracion
@@ -200,19 +231,6 @@ def index_normalizacion(request):
                 # return res
 
     return render(request, "upload.html", locals())
-
-
-import tweepy
-import time
-
-ckey = "wkRHi7BxWy8OzMNd1vuu9yzUU"
-csecret = 'Qt8xwKMTY0VswKg5KRJAvpQxH2Oz2mutmh0FiDSnY40wQjLCHY'
-atoken = '1048734440-jJr8ZW7JJycCTMtDl90oRLaQO1uX9hHV6d3eGkJ'
-asecret = '5aUjQv5tgwjSkvesoeOeRgiAEUBubLct6MqIZjOrFmnYA'
-OAUTH_KEYS = {'consumer_key': ckey, 'consumer_secret': csecret, 'access_token_key': atoken,
-              'access_token_secret': asecret}
-auth = tweepy.OAuthHandler(OAUTH_KEYS['consumer_key'], OAUTH_KEYS['consumer_secret'])
-api = tweepy.API(auth)
 
 
 def get_location(request):
@@ -263,7 +281,7 @@ def get_location(request):
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-from metodos.scraping_twitter import string_url
+from metodos.scraping_twitter import string_url, string_url2
 
 def extraccion_selenium(request):
 
@@ -273,7 +291,8 @@ def extraccion_selenium(request):
         url_until = request.POST['fechaf']
         print url_since
         print url_until
-        palabras_clave = ['femicidio', 'feminicidio', 'niunamenos']
+        palabras_clave = request.POST['palabrasc'].split(" ")
+        #palabras_clave = ['femicidio', 'feminicidio', 'niunamenos']
 
         url = string_url(palabras_clave,url_since,url_until)
 
@@ -288,11 +307,109 @@ def extraccion_selenium(request):
 
         while True:
             body.send_keys(Keys.PAGE_DOWN)
-            print "si"
             time.sleep(0.2)
-            print cont
             try:
-                print body.find_elements_by_class_name('js-tweet-text-container')[cont].text
+                print "Tweet {0}: {1}".format(cont, body.find_elements_by_class_name('js-tweet-text-container')[cont].text)
+                #print body.find_elements_by_class_name('js-tweet-text-container')[cont].text
+            except IndexError:
+                innerHTML = body.get_attribute('innerHTML')
+                break
+            cont = cont + 1
+            if cont == 1000:
+                innerHTML = body.get_attribute('innerHTML')
+                break
+
+        #print innerHTML
+        html_doc = BeautifulSoup(innerHTML, 'html.parser')
+        #print html_doc
+        browser.close()
+
+        clase_tweet1 = '''js-stream-item stream-item stream-item
+'''
+        # obtenemos los li que contienen el tweet
+        tweets = html_doc.find_all('li', class_=clase_tweet1)
+        cont = 0
+
+        for i in tweets:
+            # obtenemos el primer div del li
+            div = i.find('div')
+            cont = cont + 1
+            print "Tweet: %s" % cont
+            try:
+                timeT = div.find('span', class_="_timestamp")
+                created_at = timeT['data-time-ms']  # datetime.datetime.fromtimestamp(created_at/1000.0)
+                created_at = datetime.datetime.fromtimestamp(int(created_at) / 1000.0)
+                fullname = div.find('strong', class_="fullname show-popup-with-id ").get_text()
+                username = div.find('span', class_="username u-dir").get_text()
+                tweet = div.find('p', class_="TweetTextSize js-tweet-text tweet-text").get_text()
+                tweet_id = div['data-tweet-id']
+
+                if len(tweet) < 10 or "RT @" in tweet:
+                    pass
+
+                tweet = eliminar_urls(tweet)
+
+            except AttributeError:
+                pass
+
+            # valoraciones = i.find_all('span', class_="ProfileTweet-actionCountForPresentation")
+            #           <span class="ProfileTweet-actionCount" data-tweet-stat-count="1187">
+            valoraciones = div.find_all('span', class_="ProfileTweet-actionCount")[0:3]
+            lista = []
+
+            for valoracion in valoraciones:
+                lista.append(valoracion['data-tweet-stat-count'])
+
+            t1 = Tweet(created_at=created_at, username=username, fullname=fullname, tweet_id=tweet_id,
+                       retweet_count=lista[1],
+                       text=tweet, location="", favorite_count=lista[2])
+
+            try:
+                t1.save()
+            except IntegrityError:
+                print "Ya existe"
+
+    return render(request, "upload_selenium.html", locals())
+
+
+# IA
+def extraccion_selenium2(request):
+    res = HttpResponse(content_type='text/csv')
+    res['Content-Disposition'] = 'attachment; filename=listado.csv'
+
+    writer = csv.writer(res, delimiter=',', quotechar='"')
+
+    '''
+    t1 = Tweet(created_at=created_at, username=username, fullname=fullname, tweet_id=tweet_id,
+                       retweet_count=lista[1],
+                       text=tweet, location="", favorite_count=lista[2])
+    '''
+    writer.writerow(['date','username','fullname','tweet_id','retweet_count','tweet','favorite_count'])
+
+    if request.POST:
+        browser = webdriver.Chrome()
+        url_since = request.POST['fechai']
+        url_until = request.POST['fechaf']
+        print url_since
+        print url_until
+        palabras_clave = request.POST['palabrasc'].split(" ")
+        #palabras_clave = ['femicidio', 'feminicidio', 'niunamenos']
+
+        url = string_url(palabras_clave,url_since,url_until)
+
+        browser.get(url)
+        time.sleep(1)
+
+        body = browser.find_element_by_tag_name('body')
+        cont = 0
+        innerHTML = ""
+
+        while True:
+            body.send_keys(Keys.PAGE_DOWN)
+            time.sleep(0.3)
+            try:
+                print "Tweet {0}: {1}".format(cont, body.find_elements_by_class_name('js-tweet-text-container')[cont].text)
+                #print body.find_elements_by_class_name('js-tweet-text-container')[cont].text
             except IndexError:
                 innerHTML = body.get_attribute('innerHTML')
                 break
@@ -334,14 +451,14 @@ def extraccion_selenium(request):
             # valoraciones = i.find_all('span', class_="ProfileTweet-actionCountForPresentation")
             #           <span class="ProfileTweet-actionCount" data-tweet-stat-count="1187">
             valoraciones = div.find_all('span', class_="ProfileTweet-actionCount")[0:3]
-            print len(valoraciones)
-
             lista = []
-            print valoraciones
 
             for valoracion in valoraciones:
                 lista.append(valoracion['data-tweet-stat-count'])
 
+            writer.writerow([created_at, username, fullname, tweet_id, lista[1], tweet, lista[2]])
+
+            '''
             t1 = Tweet(created_at=created_at, username=username, fullname=fullname, tweet_id=tweet_id,
                        retweet_count=lista[1],
                        text=tweet, location="", favorite_count=lista[2])
@@ -350,5 +467,7 @@ def extraccion_selenium(request):
                 t1.save()
             except IntegrityError:
                 print "Ya existe"
+            '''
+        return res
 
     return render(request, "upload_selenium.html", locals())

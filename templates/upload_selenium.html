@@ -14,11 +14,15 @@
 <h1>Normalizar</h1>
     <form action="" method="post">{% csrf_token %}
         <div class="form-group">
-            <label for="fechai">Fecha Inicio</label>
-            <input type="date" name="fechai" data-date="" data-date-format="DD MMMM YYYY"  value="2016-01-01" required>
 
-            <label for="fechaf">Fecha Final</label>
-            <input type="date" name="fechaf" data-date="" data-date-format="DD MMMM YYYY"  value="2016-01-01" required>
+            <label for="palabrasc">Palabras clave:</label>
+            <input class="form-control" type="text" value="@LassoGuillermo @Lenin" name="palabrasc" required>
+
+            <label for="fechai">Fecha Inicio:</label>
+            <input class="form-control" type="date" name="fechai" data-date="" data-date-format="DD MMMM YYYY"  value="2017-03-01" required>
+
+            <label for="fechaf">Fecha Final:</label>
+            <input class="form-control" type="date" name="fechaf" data-date="" data-date-format="DD MMMM YYYY"  value="2017-03-01" required>
 
         </div>
 
