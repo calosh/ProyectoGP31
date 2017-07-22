@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81f9ece0-cd73-4d06-9c7b-99900ed54dc4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/graficos.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/naiveBayes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/opener_project.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/prueba_csv.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/prueba_opener.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/metodos/prueba_time.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mapa.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mi_csv/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mi_csv/migrations/0002_auto_20170523_0903.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mi_csv/migrations/0003_auto_20170523_0905.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mi_csv/migrations/0004_auto_20170529_1955.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mi_csv/migrations/__init__.py" afterPath="$PROJECT_DIR$/metodos/carter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mi_csv/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweets.sqlite3" afterPath="$PROJECT_DIR$/tweets.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweetsGP.sqlite3" afterPath="$PROJECT_DIR$/tweetsGP.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweetsIA.sqlite3" afterPath="$PROJECT_DIR$/tweetsIA.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProyectoGP/settings.py" afterPath="$PROJECT_DIR$/ProyectoGP/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProyectoGP/urls.py" afterPath="$PROJECT_DIR$/ProyectoGP/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metodos/scraping_twitter.py" afterPath="$PROJECT_DIR$/metodos/scraping_twitter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metodos/tiempo.py" afterPath="$PROJECT_DIR$/metodos/tiempo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metodos/naiveBayes.py" afterPath="$PROJECT_DIR$/metodos/naiveBayes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metodos/prueba.py" afterPath="$PROJECT_DIR$/metodos/prueba.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/views.py" afterPath="$PROJECT_DIR$/mi_csv/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/estadisticas.html" afterPath="$PROJECT_DIR$/templates/estadisticas.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendario.html" afterPath="$PROJECT_DIR$/templates/calendario.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/upload_selenium.html" afterPath="$PROJECT_DIR$/templates/upload_selenium.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +31,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-995">
-              <caret line="313" column="30" lean-forward="true" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
+            <state relative-caret-position="141">
+              <caret line="458" column="8" lean-forward="true" selection-start-line="458" selection-start-column="8" selection-end-line="458" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -50,88 +41,28 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="500">
+              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scraping_twitter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mi_csv/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="120">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_selenium.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/upload_selenium.html">
+      <file leaf-file-name="prueba.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/metodos/prueba.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/upload.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lista.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/lista.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="estadisticas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/estadisticas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calendario.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/calendario.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoGP/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1660">
-              <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+            <state relative-caret-position="60">
+              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -142,8 +73,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -168,7 +99,13 @@
       <find>estadi</find>
       <find>lista</find>
       <find>url</find>
+      <find>Ruben</find>
+      <find>graficas</find>
+      <find>Web de</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,10 +120,8 @@
         <option value="$PROJECT_DIR$/metodos/normalizacion.py" />
         <option value="$PROJECT_DIR$/metodos/normalizar.py" />
         <option value="$PROJECT_DIR$/templates/prueba.html" />
-        <option value="$PROJECT_DIR$/metodos/prueba.py" />
         <option value="$PROJECT_DIR$/mi_csv/models.py" />
         <option value="$PROJECT_DIR$/templates/calendario.py" />
-        <option value="$PROJECT_DIR$/templates/calendario.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/metodos/selenium.py" />
         <option value="$PROJECT_DIR$/metodos/usuarios.py" />
@@ -198,16 +133,19 @@
         <option value="$PROJECT_DIR$/metodos/prueba_hunspell.py" />
         <option value="$PROJECT_DIR$/metodos/prueba_enchant.py" />
         <option value="$PROJECT_DIR$/metodos/prueba_aspell.py" />
-        <option value="$PROJECT_DIR$/ProyectoGP/urls.py" />
         <option value="$PROJECT_DIR$/templates/estadisticas.html" />
         <option value="$PROJECT_DIR$/metodos/graficos.py" />
-        <option value="$PROJECT_DIR$/templates/mapa.html" />
         <option value="$PROJECT_DIR$/metodos/carter.py" />
         <option value="$PROJECT_DIR$/metodos/prueba_csv.py" />
-        <option value="$PROJECT_DIR$/metodos/naiveBayes.py" />
         <option value="$PROJECT_DIR$/metodos/scraping_twitter.py" />
+        <option value="$PROJECT_DIR$/metodos/naiveBayes.py" />
         <option value="$PROJECT_DIR$/ProyectoGP/settings.py" />
+        <option value="$PROJECT_DIR$/templates/calendario.html" />
+        <option value="$PROJECT_DIR$/templates/mapa.html" />
         <option value="$PROJECT_DIR$/templates/upload_selenium.html" />
+        <option value="$PROJECT_DIR$/mi_csv/templates/index.html" />
+        <option value="$PROJECT_DIR$/metodos/prueba.py" />
+        <option value="$PROJECT_DIR$/ProyectoGP/urls.py" />
         <option value="$PROJECT_DIR$/mi_csv/views.py" />
       </list>
     </option>
@@ -216,6 +154,47 @@
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Buildout</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JSON</id>
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>ReST</id>
+          </State>
+          <State>
+            <id>RegExp</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -232,6 +211,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,34 +263,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mi_csv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProyectoGP32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProyectoGP32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="metodos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../entornos" />
+    <property name="SearchEverywhereHistoryKey" value="shortc&#9;null&#9;null&#10;shortcuts&#9;null&#9;null&#10;djaneiro&#9;null&#9;null&#10;plugins&#9;null&#9;null&#10;plugin&#9;null&#9;null&#10;keymap&#9;ACTION&#9;ChangeKeymap&#10;plu&#9;ACTION&#9;WelcomeScreen.Plugins" />
+    <property name="ToolWindowTerminal.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -328,25 +295,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.scraping_twitter">
-    <configuration default="false" name="prueba_hunspell" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/metodos" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ProyectoIA" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metodos/prueba_hunspell.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.prueba">
     <configuration default="false" name="scraping_twitter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -414,6 +363,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ProyectoIA" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metodos/prueba_csv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="prueba" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/metodos" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ProyectoIA" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metodos/prueba.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -516,19 +483,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.prueba_hunspell" />
-      <item index="1" class="java.lang.String" itemvalue="Python.scraping_twitter" />
-      <item index="2" class="java.lang.String" itemvalue="Python.prueba_enchant" />
-      <item index="3" class="java.lang.String" itemvalue="Python.naiveBayes" />
-      <item index="4" class="java.lang.String" itemvalue="Python.prueba_csv" />
+      <item index="0" class="java.lang.String" itemvalue="Python.scraping_twitter" />
+      <item index="1" class="java.lang.String" itemvalue="Python.prueba_enchant" />
+      <item index="2" class="java.lang.String" itemvalue="Python.naiveBayes" />
+      <item index="3" class="java.lang.String" itemvalue="Python.prueba_csv" />
+      <item index="4" class="java.lang.String" itemvalue="Python.prueba" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.scraping_twitter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.prueba" />
         <item index="1" class="java.lang.String" itemvalue="Python.naiveBayes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.prueba_csv" />
-        <item index="3" class="java.lang.String" itemvalue="Python.prueba_enchant" />
-        <item index="4" class="java.lang.String" itemvalue="Python.prueba_hunspell" />
+        <item index="2" class="java.lang.String" itemvalue="Python.scraping_twitter" />
+        <item index="3" class="java.lang.String" itemvalue="Python.prueba_csv" />
+        <item index="4" class="java.lang.String" itemvalue="Python.prueba_enchant" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -554,6 +521,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="81f9ece0-cd73-4d06-9c7b-99900ed54dc4" name="Default" comment="" />
@@ -575,15 +545,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22989377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17602427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2070626" sideWeight="0.5085629" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39732888" sideWeight="0.4973939" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33555928" sideWeight="0.4973939" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5175292" sideWeight="0.49143708" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41068447" sideWeight="0.49143708" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39899832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -632,20 +603,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" column="31" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mi_csv/prueba.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -789,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mi_csv/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metodos/tiempo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -833,20 +783,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/metodos/prueba_aspell.py" />
     <entry file="file://$PROJECT_DIR$/metodos/prueba_hunspell.py" />
-    <entry file="file://$PROJECT_DIR$/metodos/graficos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="51" column="34" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mapa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metodos/carter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -861,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metodos/prueba.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/metodos/prueba_csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -875,34 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/metodos/naiveBayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="68" column="2" lean-forward="true" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoGP/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
-          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,15 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
           <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/calendario.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,30 +836,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoGP/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="135" column="35" lean-forward="false" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/idea.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mapa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metodos/graficos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mi_csv/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="685" column="0" lean-forward="false" selection-start-line="685" selection-start-column="0" selection-end-line="685" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metodos/naiveBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="61" column="54" lean-forward="false" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/upload_selenium.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mi_csv/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metodos/prueba.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="500">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-995">
-          <caret line="313" column="30" lean-forward="true" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
+        <state relative-caret-position="141">
+          <caret line="458" column="8" lean-forward="true" selection-start-line="458" selection-start-column="8" selection-end-line="458" selection-end-column="8" />
           <folding />
         </state>
       </provider>

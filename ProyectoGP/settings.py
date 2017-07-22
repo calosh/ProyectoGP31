@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'ProyectoGP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'tweets.sqlite3'),
-        'NAME': os.path.join(BASE_DIR, 'tweetsIA.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'tweets.sqlite3'),
+        #'NAME': os.path.join(BASE_DIR, 'tweetsIA.sqlite3'),
         #'NAME': os.path.join(BASE_DIR, 'tweetsGP.sqlite3'),
     }
 }
@@ -132,5 +132,6 @@ FILE_UPLOAD_HANDLERS = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "mi_csv/static")
 ]

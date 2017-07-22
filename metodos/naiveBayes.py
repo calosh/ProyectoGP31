@@ -42,27 +42,28 @@ for (words, sentiment) in datos:
     words_filtered = [e.lower() for e in nltk.word_tokenize(words.decode('utf8')) if len(e) >= 3]
     tweets.append((words_filtered, sentiment))
 
+'''
 for t in tweets:
     print(t)
-
+'''
 wordFeatures = wordFeatures(bagOfWords(tweets))
 
 training_set = nltk.classify.apply_features(getFeatures, tweets)
 
 classifier = nltk.NaiveBayesClassifier.train(training_set)
 
-print(classifier.show_most_informative_features(32))
+#print(classifier.show_most_informative_features(32))
 
 # http://www.laurentluce.com/posts/twitter-sentiment-analysis-using-python-and-nltk/
 
 tweet = "La corrupcion en este gobieno ha sido demasiada".decode('utf8')
 #print getFeatures(tweet.split())
 
-print classifier.classify(getFeatures(tweet.split()))
+#print classifier.classify(getFeatures(tweet.split()))
 
 
-tweet = "Ademate lenin, vamos por mas".decode('utf8')
-print getFeatures(tweet.split())
+tweet = "Mucha corrupcion de este gobierno".decode('utf8')
+#print getFeatures(tweet.split())
 
 print classifier.classify(getFeatures(tweet.split()))
 
