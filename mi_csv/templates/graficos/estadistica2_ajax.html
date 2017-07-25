@@ -1,0 +1,22 @@
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Meses', 'Cantidad'],
+          {% for i in listaMesesC %}
+          ['{{i.1}}',     {{i.0}}],
+          {% endfor %}
+        ]);
+
+        var options = {
+          title: 'Actividad en Meses'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>

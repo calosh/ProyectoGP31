@@ -1,7 +1,2 @@
-
-for i in range(1,20):
+for i in range(1, 5):
     print i
-    if i == 10:
-        print i
-        pass
-        print i

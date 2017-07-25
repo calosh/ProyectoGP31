@@ -1,0 +1,30 @@
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Feminicidios'],
+          {% for i in lista %}
+
+          ['{{i.0}}', {{i.1}}],
+
+          {% endfor %}
+
+        ]);
+
+        var options = {
+            region: '{{region}}',
+            colorAxis: {colors: ['#FFFFFF', '#DF0101']},
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div3'));
+
+        chart.draw(data, options);
+      }
+    </script>

@@ -41,14 +41,13 @@ def calendario():
 
 
 def mapa1():
-    lista_paises = ['Argentina', 'Brazil', 'Bolivia', 'Chile', 'Colombia', 'Costa Rica', 'Cuba',
-                    'Ecuador', 'El Salvador', 'Guatemala', 'Honduras', 'Mexico', 'Nicaragua', 'Panama',
-                    'Paraguay', 'Peru', 'Puerto Rico', 'Peru', 'Republica Dominicana', 'Uruguay', 'Venezuela'
+    lista_paises = [
+                    ['Argentina', 322], ['Brazil', 21], ['Bolivia', 104], ['Chile', 30], ['Colombia', 731],
+                    ['Costa Rica', 23], ['Cuba', 0], ['Ecuador',80], ['El Salvador', 524], ['Guatemala', 620],
+                    ['Honduras', 480], ['Mexico', 263], ['Nicaragua', 49], ['Panama', 19], ['Paraguay', 39],
+                    ['Peru', 108], ['Puerto Rico', 0], ['Republica Dominicana', 78], ['Uruguay', 22], ['Venezuela', 122]
                     ]
 
-    paises =[]
-    for i in lista_paises:
-        paisesT = Tweet.objects.filter(location=i).count()
-        paises.append([i, paisesT])
 
-    return paises
+
+    return lista_paises

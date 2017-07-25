@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>AJAX</h1>
+    <select name="autor">
+        <option>Elige autor</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+    </select>
+
+    <div id="datos">
+
+    </div>
+
+    <div id="datos2">
+
+    </div>
+
+    {% for i in lista %}
+        {{ i }}
+    {% endfor %}
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('select').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/autor-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    var html = "<p>"+object.x;
+                    $('#datos').html(html);
+                    $('#datos2').html(object.p);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

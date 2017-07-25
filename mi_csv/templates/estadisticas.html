@@ -1,0 +1,254 @@
+{% load staticfiles %}
+{% include 'head.html' %}
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div>
+                <h2>Clasificación por lugares</h2>
+                <h3>Seleccionar Categoria</h3>
+                <select name="autor" class="form-control" id="estadistica1">
+                    <option value="0">Todos</option>
+                    <option value="1">Reportes</option>
+                    <option value="2">Activismo</option>
+                    <option value="3">Opinion</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 id="tipo_t">Localizaciones con mayor presencia en la red social</h2>
+                <div id="barchart_values" style="width: 900px; height: 400px;"></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div>
+                <h2>Clasificación por Meses</h2>
+                <h3>Seleccionar Categoria</h3>
+                <select name="autor" class="form-control" id="estadistica2">
+                    <option value="0">Todos</option>
+                    <option value="1">Reportes</option>
+                    <option value="2">Activismo</option>
+                    <option value="3">Opinion</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Número de Tweets en el 2016</h2>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="chart_div" style="width: 100%; height: 500px;"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Usuarios</h2>
+                <h3>Seleccionar Categoria</h3>
+                <select name="autor" class="form-control" id="estadistica4">
+                    <option value="0">Todos</option>
+                    <option value="1">Reportes</option>
+                    <option value="2">Activismo</option>
+                    <option value="3">Opinion</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="usuarios_relevantes">
+
+            {% for i in lista_usuarios %}
+            <div class="col-md-3">
+                <img src="{{i.1}}" alt="..." class="img-circle">
+                <h3>{{i.0}}</h3>
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+    </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; utpl 2017</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Meses', 'Cantidad'],
+          {% for i in listaMesesC %}
+          ['{{i.1}}',     {{i.0}}],
+          {% endfor %}
+        ]);
+
+        var options = {
+          title: 'Actividad en Meses'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+      <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        {% for i in tweets_location %}
+        ["{{i.location}}", {{i.total}}, "{{i.color}}"],
+        {% endfor %}
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Paises con mas actividad",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Mes', '2016', '2017'],
+          {% for i in listaMesesC20167 %}
+          ['{{i.1}}',  {{i.0}}, {{i.2}}],
+           {% endfor %}
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<!-- Estadisticas 1-->
+    <script>
+        $('#estadistica1').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/estadistica1-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    $('#barchart_values').html(object.mapa);
+                    $('#tipo_t').html(object.tipo);
+
+                }
+            });
+        }
+    </script>
+
+<!-- Estadisticas 2 -->
+
+    <script>
+        $('#estadistica2').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/estadistica2-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    $('#piechart').html(object.mapa);
+
+                }
+            });
+        }
+    </script>
+
+<!-- Estadisticas 4 -->
+
+    <script>
+        $('#estadistica4').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/estadistica4-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    $('#usuarios_relevantes').html(object.mapa);
+
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

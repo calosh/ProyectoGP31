@@ -1,0 +1,98 @@
+{% load staticfiles %}
+{% include 'head.html' %}
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Mapas sobre
+                    <small>Feminicios en America Latina</small>
+                </h1>
+                <p>
+                    Centenares de mujeres son asesinadas en América Latina y el Caribe por una sola razón: su género. Los feminicidios han crecido en la región en los últimos años y lo más grave es que 98 por ciento de los casos permanecen impunes.
+                </p>
+                <p>
+                    Las tasas más altas la tienen 25 países del mundo, 14 de ellos de la región. Guatemala, El Salvador y Honduras figuran con unos de los índices más altos del planeta y en Argentina y México también se reportan cifras alarmantes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Team Members Row -->
+
+        <div class="row">
+            <div>
+                <h1>Selecionar continente</h1>
+                <select name="autor" class="form-control">
+                    <option>--</option>
+                    <option value="1">América Central</option>
+                    <option value="2">Caribe</option>
+                    <option value="3">América del Sur</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <h2 id="continente"></h2>
+                <div id="regions_div3" style="width: 900px; height: 500px;">
+                    <h1>En América latina se da el 50% de Feminicidios a nivel Mundial</h1>
+                </div>
+
+
+            </div>
+        </div><!-- /.row -->
+    </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; utpl 2017</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script>
+        $('select').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/mapa-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    $('#regions_div3').html(object.mapa);
+                    $('#continente').html(object.continente);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

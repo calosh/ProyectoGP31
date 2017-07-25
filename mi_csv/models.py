@@ -19,6 +19,8 @@ class Tweet(models.Model):
     #retweeted = models.IntegerField()
     #favorited = models.IntegerField()
 
+    clasificacion = models.CharField(max_length=20, blank=True, null=True)
+
 
 
 # https://www.imaginanet.com/blog/primeros-pasos-con-sqlite3-comandos-basicos.html
