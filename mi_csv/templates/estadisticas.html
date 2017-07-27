@@ -7,7 +7,7 @@
     <div class="container">
 
         <div class="row">
-            <div>
+            <div class="col-lg-2">
                 <h2>Clasificación por lugares</h2>
                 <h3>Seleccionar Categoria</h3>
                 <select name="autor" class="form-control" id="estadistica1">
@@ -28,7 +28,7 @@
 
 
         <div class="row">
-            <div>
+            <div class="col-lg-2">
                 <h2>Clasificación por Meses</h2>
                 <h3>Seleccionar Categoria</h3>
                 <select name="autor" class="form-control" id="estadistica2">
@@ -47,13 +47,27 @@
             </div>
         </div>
 
+
+        <div class="row">
+            <div class="col-lg-2">
+                <h2>Clasificación por Meses</h2>
+                <h3>Seleccionar Categoria</h3>
+                <select name="autor" class="form-control" id="estadistica3">
+                    <option value="0">Todos</option>
+                    <option value="1">Reportes</option>
+                    <option value="2">Activismo</option>
+                    <option value="3">Opinion</option>
+                </select>
+            </div>
+        </div>
+
         <div class="row">
             <div id="chart_div" style="width: 100%; height: 500px;"></div>
         </div>
 
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-2">
                 <h2>Usuarios</h2>
                 <h3>Seleccionar Categoria</h3>
                 <select name="autor" class="form-control" id="estadistica4">
@@ -65,7 +79,8 @@
             </div>
         </div>
         <div class="row" id="usuarios_relevantes">
-
+            <div class="col-md-2">
+            </div>
             {% for i in lista_usuarios %}
             <div class="col-md-3">
                 <img src="{{i.1}}" alt="..." class="img-circle">
@@ -226,6 +241,30 @@
             });
         }
     </script>
+
+
+<!-- Estadisticas 3 -->
+
+    <script>
+        $('#estadistica3').on('change', Cambiar);
+        function Cambiar(){
+            var id = $(this).val();
+            $.ajax({
+                data : {'id':id},
+                url : '/estadistica3-ajax/',
+                type : 'get',
+                success : function(data){
+                    console.log(data);
+                    var object = JSON.parse(data);
+
+                    console.log(object);
+                    $('#usuarios_relevantes').html(object.mapa);
+
+                }
+            });
+        }
+    </script>
+
 
 <!-- Estadisticas 4 -->
 
