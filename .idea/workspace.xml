@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81f9ece0-cd73-4d06-9c7b-99900ed54dc4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweets.sqlite3" afterPath="$PROJECT_DIR$/tweets.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProyectoGP/urls.py" afterPath="$PROJECT_DIR$/ProyectoGP/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metodos/scraping_twitter.py" afterPath="$PROJECT_DIR$/metodos/scraping_twitter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/estadisticas.html" afterPath="$PROJECT_DIR$/mi_csv/templates/estadisticas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica1_ajax.html" afterPath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica1_ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica4_ajax.html" afterPath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica4_ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/index.html" afterPath="$PROJECT_DIR$/mi_csv/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html" afterPath="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/templates/mapa.html" afterPath="$PROJECT_DIR$/mi_csv/templates/mapa.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mi_csv/views.py" afterPath="$PROJECT_DIR$/mi_csv/views.py" />
     </list>
@@ -29,31 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10620">
-              <caret line="532" column="0" lean-forward="true" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
+            <state relative-caret-position="-57">
+              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scraping_twitter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+            <state relative-caret-position="440">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estadistica1_ajax.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="estadistica1_ajax.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica1_ajax.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="97">
+              <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -69,21 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estadistica4_ajax.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica4_ajax.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="estadisticas.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mi_csv/templates/estadisticas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="197" column="13" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="197" selection-end-column="13" />
+            <state relative-caret-position="3960">
+              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -94,38 +81,8 @@
       <file leaf-file-name="estadistica3_ajax.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mi_csv/templates/head.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mi_csv/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-403">
-              <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+            <state relative-caret-position="260">
+              <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -143,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>den</find>
       <find>IVPQv6WAcB6qPPCEczMyCw</find>
       <find>hey tha</find>
       <find>tweet-text</find>
@@ -173,6 +129,7 @@
       <find>location</find>
       <find>barchart_values</find>
       <find>listaMeses</find>
+      <find>Context</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -204,7 +161,6 @@
         <option value="$PROJECT_DIR$/metodos/prueba_aspell.py" />
         <option value="$PROJECT_DIR$/templates/estadisticas.html" />
         <option value="$PROJECT_DIR$/metodos/carter.py" />
-        <option value="$PROJECT_DIR$/metodos/scraping_twitter.py" />
         <option value="$PROJECT_DIR$/ProyectoGP/settings.py" />
         <option value="$PROJECT_DIR$/templates/calendario.html" />
         <option value="$PROJECT_DIR$/templates/mapa.html" />
@@ -223,13 +179,15 @@
         <option value="$PROJECT_DIR$/mi_csv/prueba.py" />
         <option value="$PROJECT_DIR$/mi_csv/templates/head.html" />
         <option value="$PROJECT_DIR$/mi_csv/templates/index.html" />
-        <option value="$PROJECT_DIR$/mi_csv/templates/mapa.html" />
         <option value="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica4_ajax.html" />
-        <option value="$PROJECT_DIR$/ProyectoGP/urls.py" />
-        <option value="$PROJECT_DIR$/mi_csv/templates/estadisticas.html" />
-        <option value="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html" />
-        <option value="$PROJECT_DIR$/mi_csv/views.py" />
         <option value="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica1_ajax.html" />
+        <option value="$PROJECT_DIR$/mi_csv/templates/graficos/arbol.html" />
+        <option value="$PROJECT_DIR$/ProyectoGP/urls.py" />
+        <option value="$PROJECT_DIR$/mi_csv/templates/mapa.html" />
+        <option value="$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html" />
+        <option value="$PROJECT_DIR$/mi_csv/templates/estadisticas.html" />
+        <option value="$PROJECT_DIR$/metodos/scraping_twitter.py" />
+        <option value="$PROJECT_DIR$/mi_csv/views.py" />
       </list>
     </option>
   </component>
@@ -295,7 +253,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,12 +289,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoGP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoGP32" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoGP32" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="mi_csv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,14 +593,14 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21396054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21775417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2070626" sideWeight="0.5085629" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.4973939" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33555928" sideWeight="0.4973939" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38564274" sideWeight="0.49143708" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39065108" sideWeight="0.49143708" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39899832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -677,7 +649,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/calendario.py" />
     <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/metodos/tiempo.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -921,38 +892,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mi_csv/templates/mapa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica4_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mi_csv/templates/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-403">
+        <state relative-caret-position="-426">
           <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mi_csv/templates/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="49" column="71" lean-forward="false" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/arbol.html" />
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/mapa_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -961,52 +922,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
+    <entry file="file://$PROJECT_DIR$/mi_csv/templates/mapa.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="40" column="65" lean-forward="false" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica3_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10620">
-          <caret line="532" column="0" lean-forward="true" selection-start-line="532" selection-start-column="0" selection-end-line="532" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/estadisticas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="197" column="13" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="197" selection-end-column="13" />
+        <state relative-caret-position="3960">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoGP/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mi_csv/templates/graficos/estadistica1_ajax.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="97">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metodos/scraping_twitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mi_csv/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
           <folding />
         </state>
       </provider>

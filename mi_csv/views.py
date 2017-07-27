@@ -11,7 +11,6 @@ from django.http import HttpResponse, JsonResponse
 from django.db.models import Count
 from django.db import IntegrityError
 from django.template.loader import get_template
-from django.template import Context
 
 from .models import Tweet
 
@@ -65,8 +64,9 @@ def mapa_ajax(request):
             continente = "America del Sur"
             region = "005"
 
+        # https://github.com/django-crispy-forms/django-crispy-forms/issues/553
         t = get_template('graficos/mapa_ajax.html')
-        html = t.render(Context({'lista': r, 'region': region}))
+        html = t.render({'lista': r, 'region': region})
         html = html + ""
         response = JsonResponse({'mapa': html, 'continente': continente})
         return HttpResponse(response.content)
@@ -91,11 +91,7 @@ def estadisticas(request):
         listaAux.append(int(i["count"]))
         lista.append(listaAux)
 
-        # Meses
-        print int(listafecha[1]) - 1
-
         listaMeses[int(listafecha[1]) - 1] = listaMeses[int(listafecha[1]) - 1] + int(i["count"])
-    print listaMeses
 
     # EStadistica 3 -->  Comparativa meses 2016 - 2017
     listaMesesC = []
@@ -115,7 +111,6 @@ def estadisticas(request):
     # Usuarios que mas publican
     usuarios_publicacion = Tweet.objects.all().values('username').annotate(total=Count('username')).order_by('-total')[0:3]
     lista_usuarios = []
-    print usuarios_publicacion
     for i in usuarios_publicacion:
         u = api.get_user(screen_name=i['username'])
         imagen = u.profile_image_url
@@ -147,7 +142,7 @@ def estadistica1_ajax(request):
             tipo = "Opinion"
 
         t = get_template('graficos/estadistica1_ajax.html')
-        html = t.render(Context({'tweets_location': tweets_location, 'tipo': tipo}))
+        html = t.render({'tweets_location': tweets_location, 'tipo': tipo})
         html = html + ""
         response = JsonResponse({'mapa': html, 'tipo': tipo})
         return HttpResponse(response.content)
@@ -193,7 +188,7 @@ def estadistica2_ajax(request):
             listaMesesC = tweets_por_meses('opinion')
 
         t = get_template('graficos/estadistica2_ajax.html')
-        html = t.render(Context({'listaMesesC': listaMesesC}))
+        html = t.render({'listaMesesC': listaMesesC})
         html = html + ""
         response = JsonResponse({'mapa': html})
         return HttpResponse(response.content)
@@ -249,7 +244,7 @@ def estadistica3_ajax(request):
             listaMesesC = tweets_anio_2016_2017("opinion")
 
         t = get_template('graficos/estadistica3_ajax.html')
-        html = t.render(Context({'listaMesesC20167': listaMesesC}))
+        html = t.render({'listaMesesC20167': listaMesesC})
         html = html + ""
         response = JsonResponse({'mapa': html})
         return HttpResponse(response.content)
@@ -314,7 +309,7 @@ def estadistica4_ajax(request):
             lista_usuarios = get_image_user('opinion')
 
         t = get_template('graficos/estadistica4_ajax.html')
-        html = t.render(Context({'lista_usuarios': lista_usuarios}))
+        html = t.render({'lista_usuarios': lista_usuarios})
         html = html + ""
         response = JsonResponse({'mapa': html})
         return HttpResponse(response.content)
@@ -334,7 +329,6 @@ def get_image_user(clasificacion):
             '-total')[0:3]
 
     lista_usuarios = []
-    print usuarios_publicacion
     for i in usuarios_publicacion:
         u = api.get_user(screen_name=i['username'])
         imagen = u.profile_image_url
@@ -358,9 +352,6 @@ def calendario(request):
         listaAux.append(int(i["count"]))
         lista.append(listaAux)
 
-        # Meses
-        print int(listafecha[1]) - 1
-
     return render(request, 'calendario.html', {'lista': lista})
 
 
@@ -368,8 +359,6 @@ def calendario(request):
 def get_location(request):
     usuarios = Tweet.objects.filter(location="").values('username').distinct()
     cont = 0
-
-    print len(usuarios)
 
     for usuario in usuarios:
         obj = Tweet.objects.filter(username=usuario['username'], location="")
@@ -384,11 +373,12 @@ def get_location(request):
             u = api.get_user(screen_name=usuario['username'])
         except tweepy.TweepError:
             print usuario['username']
-            print "Error"
+            print "Error --> Usuario no existe: Eliminado o Bloqueado"
             continue
 
         for i in obj:
             if u.location == "" or len(u.location) == 0:
+                print "Sin Localizacion"
                 i.location = "S/L"
                 i.followers = u.followers_count
             else:
@@ -396,8 +386,6 @@ def get_location(request):
                 i.location = u.location
                 i.followers = u.followers_count
                 print u.location
-
-            print i.id
 
             i.save()
 
@@ -416,8 +404,8 @@ def naive_bayes(request):
         i.clasificacion = clasificacion[cont]
         cont = cont + 1
         i.save()
-        print "Guardando: %d" %cont
-    print "Se clasificaron: %d" %cont
+        print "Guardando: %d" % cont
+    print "Se clasificaron: %d" % cont
     return render(request, 'index.html')
 
 
@@ -524,7 +512,7 @@ def autor_ajax(request):
             print "Aqui 3"
             lista = ["Paraguay", "Uruguay", "Chile", "Colombia"]
         t = get_template('ajax2.html')
-        html = t.render(Context({'lista': lista}))
+        html = t.render({'lista': lista})
         html = html +""
         response = JsonResponse({'name':"Carlos", 'x':x, 'p':html})
         return HttpResponse(response.content)

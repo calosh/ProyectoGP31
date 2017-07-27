@@ -30,7 +30,6 @@ def string_url(palabras_clave,url_since,url_until):
 
 
     palabras_clave_url = ""
-    print palabras_clave
     for i in palabras_clave:
         if len(palabras_clave) > 1:
             if i == palabras_clave[len(palabras_clave) - 1]:
@@ -46,32 +45,3 @@ def string_url(palabras_clave,url_since,url_until):
             .format(palabras_clave_url, url_since, url_until))
 
     return url2
-
-def string_url2(palabras_clave,url_since,url_until):
-
-
-    palabras_clave_url = ""
-
-    for i in palabras_clave:
-        if len(palabras_clave) > 1:
-            if i == palabras_clave[len(palabras_clave) - 1]:
-                palabras_clave_url = palabras_clave_url + "{0}%20".format(i)
-            else:
-                palabras_clave_url = palabras_clave_url + "{0}%20OR%20".format(i)
-        else:
-            palabras_clave_url = "{0}%20".format(i)
-
-
-    # https://twitter.com/search?l=&q=lenin%20%23elecciones2017ec%20since%3A2017-06-01%20until%3A2017-06-03&src=typd&lang=es
-    url2 = ("https://twitter.com/search?l=&q={0}%23elecciones2017ec%20since%3A{1}%20until%3A{2}&src=typd&lang=es"
-            .format(palabras_clave_url, url_since, url_until))
-
-    return url2
-
-
-
-url_since = "2016-01-01"
-url_until = "2016-01-02"
-palabras_clave = ['VivasNosQueremos', '20NiUnaMenos', 'feminicidio','femicidio']
-print "https://twitter.com/search?l=&q=VivasNosQueremos%20OR%2020NiUnaMenos%20OR%20feminicidio%20OR%20femicidio%20since%3A2017-07-08%20until%3A2017-07-10&src=typd&lang=es"
-print string_url(palabras_clave,url_since,url_until)
